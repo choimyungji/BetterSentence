@@ -16,6 +16,7 @@
 		FAE65B652574B0A40005363D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE65B632574B0A40005363D /* LaunchScreen.storyboard */; };
 		FAE65B702574B0A50005363D /* BetterSentenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE65B6F2574B0A50005363D /* BetterSentenceTests.swift */; };
 		FAE65B7B2574B0A50005363D /* BetterSentenceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE65B7A2574B0A50005363D /* BetterSentenceUITests.swift */; };
+		FAF6803B25CC3A2D000B7B2D /* Sentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF6803A25CC3A2D000B7B2D /* Sentence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		FAE65B762574B0A50005363D /* BetterSentenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetterSentenceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE65B7A2574B0A50005363D /* BetterSentenceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterSentenceUITests.swift; sourceTree = "<group>"; };
 		FAE65B7C2574B0A50005363D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF6803A25CC3A2D000B7B2D /* Sentence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				FAE65B632574B0A40005363D /* LaunchScreen.storyboard */,
 				FAE65B662574B0A40005363D /* Info.plist */,
 				FAE65B5E2574B0A30005363D /* BetterSentence.xcdatamodeld */,
+				FAF6803A25CC3A2D000B7B2D /* Sentence.swift */,
 			);
 			path = BetterSentence;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			files = (
 				FAE65B5A2574B0A30005363D /* ViewController.swift in Sources */,
 				FAE65B562574B0A30005363D /* AppDelegate.swift in Sources */,
+				FAF6803B25CC3A2D000B7B2D /* Sentence.swift in Sources */,
 				FAE65B602574B0A30005363D /* BetterSentence.xcdatamodeld in Sources */,
 				FAE65B582574B0A30005363D /* SceneDelegate.swift in Sources */,
 			);
