@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FAB1F37D25DFFE130067CB9E /* NotoSerifCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FAB1F37925DFFCAB0067CB9E /* NotoSerifCJKkr-Medium.otf */; };
 		FAE65B562574B0A30005363D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE65B552574B0A30005363D /* AppDelegate.swift */; };
 		FAE65B582574B0A30005363D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE65B572574B0A30005363D /* SceneDelegate.swift */; };
 		FAE65B5A2574B0A30005363D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE65B592574B0A30005363D /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FAB1F37925DFFCAB0067CB9E /* NotoSerifCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifCJKkr-Medium.otf"; sourceTree = "<group>"; };
 		FAE65B522574B0A30005363D /* BetterSentence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterSentence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE65B552574B0A30005363D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAE65B572574B0A30005363D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FAB1F37825DFFC8C0067CB9E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FAB1F37925DFFCAB0067CB9E /* NotoSerifCJKkr-Medium.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		FAE65B492574B0A30005363D = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 		FAE65B542574B0A30005363D /* BetterSentence */ = {
 			isa = PBXGroup;
 			children = (
+				FAB1F37825DFFC8C0067CB9E /* Fonts */,
 				FAE65B552574B0A30005363D /* AppDelegate.swift */,
 				FAE65B572574B0A30005363D /* SceneDelegate.swift */,
 				FAE65B592574B0A30005363D /* ViewController.swift */,
@@ -237,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB1F37D25DFFE130067CB9E /* NotoSerifCJKkr-Medium.otf in Resources */,
 				FAE65B652574B0A40005363D /* LaunchScreen.storyboard in Resources */,
 				FAE65B622574B0A40005363D /* Assets.xcassets in Resources */,
 				FAE65B5D2574B0A30005363D /* Main.storyboard in Resources */,
