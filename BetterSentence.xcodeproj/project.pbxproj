@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		FAB1F37D25DFFE130067CB9E /* NotoSerifCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FAB1F37925DFFCAB0067CB9E /* NotoSerifCJKkr-Medium.otf */; };
+		FAB1F38825E1498B0067CB9E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB1F38725E1498B0067CB9E /* WidgetKit.framework */; };
+		FAB1F38A25E1498B0067CB9E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB1F38925E1498B0067CB9E /* SwiftUI.framework */; };
+		FAB1F38D25E1498B0067CB9E /* BetterWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1F38C25E1498B0067CB9E /* BetterWidget.swift */; };
+		FAB1F39025E1498D0067CB9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB1F38F25E1498D0067CB9E /* Assets.xcassets */; };
+		FAB1F39225E1498D0067CB9E /* BetterWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = FAB1F38E25E1498B0067CB9E /* BetterWidget.intentdefinition */; };
+		FAB1F39325E1498D0067CB9E /* BetterWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = FAB1F38E25E1498B0067CB9E /* BetterWidget.intentdefinition */; };
+		FAB1F39625E1498D0067CB9E /* BetterWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FAB1F38525E1498B0067CB9E /* BetterWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FAE65B562574B0A30005363D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE65B552574B0A30005363D /* AppDelegate.swift */; };
 		FAE65B582574B0A30005363D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE65B572574B0A30005363D /* SceneDelegate.swift */; };
 		FAE65B5A2574B0A30005363D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE65B592574B0A30005363D /* ViewController.swift */; };
@@ -21,6 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FAB1F39425E1498D0067CB9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAE65B4A2574B0A30005363D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAB1F38425E1498B0067CB9E;
+			remoteInfo = BetterWidgetExtension;
+		};
 		FAE65B6C2574B0A50005363D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FAE65B4A2574B0A30005363D /* Project object */;
@@ -37,8 +51,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FAB1F39A25E1498D0067CB9E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FAB1F39625E1498D0067CB9E /* BetterWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		FAB1F37925DFFCAB0067CB9E /* NotoSerifCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifCJKkr-Medium.otf"; sourceTree = "<group>"; };
+		FAB1F38525E1498B0067CB9E /* BetterWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BetterWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAB1F38725E1498B0067CB9E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		FAB1F38925E1498B0067CB9E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		FAB1F38C25E1498B0067CB9E /* BetterWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterWidget.swift; sourceTree = "<group>"; };
+		FAB1F38E25E1498B0067CB9E /* BetterWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = BetterWidget.intentdefinition; sourceTree = "<group>"; };
+		FAB1F38F25E1498D0067CB9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAB1F39125E1498D0067CB9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAE65B522574B0A30005363D /* BetterSentence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterSentence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE65B552574B0A30005363D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAE65B572574B0A30005363D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +93,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FAB1F38225E1498B0067CB9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB1F38A25E1498B0067CB9E /* SwiftUI.framework in Frameworks */,
+				FAB1F38825E1498B0067CB9E /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAE65B4F2574B0A30005363D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -90,12 +134,34 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		FAB1F38625E1498B0067CB9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAB1F38725E1498B0067CB9E /* WidgetKit.framework */,
+				FAB1F38925E1498B0067CB9E /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAB1F38B25E1498B0067CB9E /* BetterWidget */ = {
+			isa = PBXGroup;
+			children = (
+				FAB1F38C25E1498B0067CB9E /* BetterWidget.swift */,
+				FAB1F38E25E1498B0067CB9E /* BetterWidget.intentdefinition */,
+				FAB1F38F25E1498D0067CB9E /* Assets.xcassets */,
+				FAB1F39125E1498D0067CB9E /* Info.plist */,
+			);
+			path = BetterWidget;
+			sourceTree = "<group>";
+		};
 		FAE65B492574B0A30005363D = {
 			isa = PBXGroup;
 			children = (
 				FAE65B542574B0A30005363D /* BetterSentence */,
 				FAE65B6E2574B0A50005363D /* BetterSentenceTests */,
 				FAE65B792574B0A50005363D /* BetterSentenceUITests */,
+				FAB1F38B25E1498B0067CB9E /* BetterWidget */,
+				FAB1F38625E1498B0067CB9E /* Frameworks */,
 				FAE65B532574B0A30005363D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,6 +172,7 @@
 				FAE65B522574B0A30005363D /* BetterSentence.app */,
 				FAE65B6B2574B0A50005363D /* BetterSentenceTests.xctest */,
 				FAE65B762574B0A50005363D /* BetterSentenceUITests.xctest */,
+				FAB1F38525E1498B0067CB9E /* BetterWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,6 +215,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FAB1F38425E1498B0067CB9E /* BetterWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAB1F39725E1498D0067CB9E /* Build configuration list for PBXNativeTarget "BetterWidgetExtension" */;
+			buildPhases = (
+				FAB1F38125E1498B0067CB9E /* Sources */,
+				FAB1F38225E1498B0067CB9E /* Frameworks */,
+				FAB1F38325E1498B0067CB9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BetterWidgetExtension;
+			productName = BetterWidgetExtension;
+			productReference = FAB1F38525E1498B0067CB9E /* BetterWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		FAE65B512574B0A30005363D /* BetterSentence */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAE65B7F2574B0A50005363D /* Build configuration list for PBXNativeTarget "BetterSentence" */;
@@ -155,10 +239,12 @@
 				FAE65B4E2574B0A30005363D /* Sources */,
 				FAE65B4F2574B0A30005363D /* Frameworks */,
 				FAE65B502574B0A30005363D /* Resources */,
+				FAB1F39A25E1498D0067CB9E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FAB1F39525E1498D0067CB9E /* PBXTargetDependency */,
 			);
 			name = BetterSentence;
 			productName = BetterSentence;
@@ -210,6 +296,9 @@
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					FAB1F38425E1498B0067CB9E = {
+						CreatedOnToolsVersion = 12.2;
+					};
 					FAE65B512574B0A30005363D = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -239,11 +328,20 @@
 				FAE65B512574B0A30005363D /* BetterSentence */,
 				FAE65B6A2574B0A50005363D /* BetterSentenceTests */,
 				FAE65B752574B0A50005363D /* BetterSentenceUITests */,
+				FAB1F38425E1498B0067CB9E /* BetterWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FAB1F38325E1498B0067CB9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB1F39025E1498D0067CB9E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAE65B502574B0A30005363D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -272,12 +370,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FAB1F38125E1498B0067CB9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB1F39225E1498D0067CB9E /* BetterWidget.intentdefinition in Sources */,
+				FAB1F38D25E1498B0067CB9E /* BetterWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAE65B4E2574B0A30005363D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FAE65B5A2574B0A30005363D /* ViewController.swift in Sources */,
 				FAE65B562574B0A30005363D /* AppDelegate.swift in Sources */,
+				FAB1F39325E1498D0067CB9E /* BetterWidget.intentdefinition in Sources */,
 				FAF6803B25CC3A2D000B7B2D /* Sentence.swift in Sources */,
 				FAE65B602574B0A30005363D /* BetterSentence.xcdatamodeld in Sources */,
 				FAE65B582574B0A30005363D /* SceneDelegate.swift in Sources */,
@@ -303,6 +411,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FAB1F39525E1498D0067CB9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAB1F38425E1498B0067CB9E /* BetterWidgetExtension */;
+			targetProxy = FAB1F39425E1498D0067CB9E /* PBXContainerItemProxy */;
+		};
 		FAE65B6D2574B0A50005363D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FAE65B512574B0A30005363D /* BetterSentence */;
@@ -335,6 +448,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FAB1F39825E1498D0067CB9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JVM82SQA75;
+				INFOPLIST_FILE = BetterWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.lpin.BetterSentence.BetterWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAB1F39925E1498D0067CB9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JVM82SQA75;
+				INFOPLIST_FILE = BetterWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.lpin.BetterSentence.BetterWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		FAE65B7D2574B0A50005363D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -454,6 +609,7 @@
 		FAE65B802574B0A50005363D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -474,6 +630,7 @@
 		FAE65B812574B0A50005363D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -578,6 +735,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FAB1F39725E1498D0067CB9E /* Build configuration list for PBXNativeTarget "BetterWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAB1F39825E1498D0067CB9E /* Debug */,
+				FAB1F39925E1498D0067CB9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FAE65B4D2574B0A30005363D /* Build configuration list for PBXProject "BetterSentence" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
