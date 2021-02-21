@@ -43,8 +43,9 @@ struct SimpleEntry: TimelineEntry {
 struct BetterWidgetEntryView : View {
     var entry: Provider.Entry
 
+    let sentence = exampleSentence.randomElement()
     var body: some View {
-        Text(entry.date, style: .time)
+        Text(sentence?.sentence ?? "")
     }
 }
 
