@@ -46,6 +46,8 @@ struct BetterWidgetEntryView : View {
     let sentence = exampleSentence.randomElement()
     var body: some View {
         Text(sentence?.sentence ?? "")
+            .padding()
+            .lineSpacing(8.0)
     }
 }
 
