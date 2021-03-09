@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -34,13 +35,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C4u-vO-obq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gyj-Ja-EiE">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jkH-eD-Ze1">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7oK-Ex-QL8">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JdR-ZI-A3g" firstAttribute="top" secondItem="9eP-em-Vio" secondAttribute="bottom" constant="8" id="9A7-rC-uND"/>
+                            <constraint firstItem="C4u-vO-obq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JB5-ob-PgS"/>
                             <constraint firstItem="9eP-em-Vio" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="MLf-Uu-Had"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="C4u-vO-obq" secondAttribute="bottom" id="T8k-fn-Vno"/>
                             <constraint firstItem="9eP-em-Vio" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="WKB-Ob-zmD"/>
+                            <constraint firstItem="C4u-vO-obq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Y5q-zN-n8z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C4u-vO-obq" secondAttribute="trailing" id="dEh-rH-mQ3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9eP-em-Vio" secondAttribute="trailing" constant="16" id="mOP-c2-aw8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JdR-ZI-A3g" secondAttribute="trailing" constant="16" id="oyB-1T-Yat"/>
                             <constraint firstItem="JdR-ZI-A3g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qj0-Ov-SGm"/>
@@ -48,12 +73,13 @@
                     </view>
                     <connections>
                         <outlet property="authorLabel" destination="JdR-ZI-A3g" id="Vfu-aP-TaE"/>
+                        <outlet property="collectionView" destination="C4u-vO-obq" id="q4S-Pd-jmE"/>
                         <outlet property="sentenceLabel" destination="9eP-em-Vio" id="arW-i3-RoE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="94"/>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
         </scene>
     </scenes>
     <resources>
