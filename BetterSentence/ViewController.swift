@@ -11,9 +11,11 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var sentenceLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
-
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
         let sentence = exampleSentence.randomElement()
         sentenceLabel.text = sentence?.sentence
