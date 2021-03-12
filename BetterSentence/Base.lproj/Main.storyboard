@@ -38,7 +38,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C4u-vO-obq">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gyj-Ja-EiE">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gyj-Ja-EiE">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -52,16 +52,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s94-1T-64z">
-                                                    <rect key="frame" x="43" y="53.5" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s94-1T-64z">
+                                                    <rect key="frame" x="16" y="16" width="96" height="96"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="s94-1T-64z" firstAttribute="centerY" secondItem="7oK-Ex-QL8" secondAttribute="centerY" id="4YK-KE-LU5"/>
-                                                <constraint firstItem="s94-1T-64z" firstAttribute="centerX" secondItem="7oK-Ex-QL8" secondAttribute="centerX" id="l0R-uO-3DG"/>
+                                                <constraint firstAttribute="trailing" secondItem="s94-1T-64z" secondAttribute="trailing" constant="16" id="HkJ-Yj-FPB"/>
+                                                <constraint firstItem="s94-1T-64z" firstAttribute="top" secondItem="7oK-Ex-QL8" secondAttribute="top" constant="16" id="JY7-2s-jms"/>
+                                                <constraint firstItem="s94-1T-64z" firstAttribute="leading" secondItem="7oK-Ex-QL8" secondAttribute="leading" constant="16" id="gKN-za-Bh9"/>
+                                                <constraint firstAttribute="bottom" secondItem="s94-1T-64z" secondAttribute="bottom" constant="16" id="ojy-sK-buH"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>

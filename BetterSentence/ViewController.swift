@@ -23,10 +23,11 @@ class ViewController: UIViewController {
         
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+    
     }
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         exampleSentence.count
     }
@@ -37,6 +38,21 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.lbl.text = exampleSentence[indexPath.row].sentence
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.frame.width
+        
+        let size = CGSize(width: width, height: 100)
+        return size
     }
     
 }
