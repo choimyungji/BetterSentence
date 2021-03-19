@@ -62,4 +62,8 @@ class CSCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lbl: UILabel!
     @IBOutlet weak var author: UILabel!
     
+    override func draw(_ rect: CGRect) {
+        lbl.font = UIFont(name: "NotoSerifCJKkr-Medium", size: 17)
+        author.font = UIFont(name: "NotoSerifCJKkr-Medium", size: 15)
+    }
 }
