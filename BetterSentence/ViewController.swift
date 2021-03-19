@@ -36,6 +36,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDelegateFlow
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CSCollectionViewCell
         
         cell.lbl.text = exampleSentence[indexPath.row].sentence
+        cell.author.text = exampleSentence[indexPath.row].author
         
         return cell
     }
@@ -59,5 +60,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDelegateFlow
 
 class CSCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lbl: UILabel!
+    @IBOutlet weak var author: UILabel!
     
 }
