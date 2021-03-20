@@ -52,7 +52,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDelegateFlow
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.frame.width
         
-        let size = CGSize(width: width, height: 100)
+        let size = CGSize(width: width, height: 134)
         return size
     }
     
@@ -65,5 +65,10 @@ class CSCollectionViewCell: UICollectionViewCell {
     override func draw(_ rect: CGRect) {
         lbl.font = UIFont(name: "NotoSerifCJKkr-Medium", size: 17)
         author.font = UIFont(name: "NotoSerifCJKkr-Medium", size: 15)
+        
+        print(frame)
+        let line = UIView(frame: CGRect(x: frame.width * 3 / 8, y: frame.height-1, width: frame.width/4, height: 0.5))
+        line.backgroundColor = .gray
+        self.addSubview(line)
     }
 }
