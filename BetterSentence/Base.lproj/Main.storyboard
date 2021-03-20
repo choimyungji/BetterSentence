@@ -59,7 +59,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXS-9H-ot0">
-                                                    <rect key="frame" x="84" y="99.5" width="36" height="20.5"/>
+                                                    <rect key="frame" x="76" y="91.5" width="36" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -69,8 +69,8 @@
                                                 <constraint firstAttribute="trailing" secondItem="s94-1T-64z" secondAttribute="trailing" constant="16" id="HkJ-Yj-FPB"/>
                                                 <constraint firstItem="s94-1T-64z" firstAttribute="top" secondItem="7oK-Ex-QL8" secondAttribute="top" constant="16" id="JY7-2s-jms"/>
                                                 <constraint firstItem="s94-1T-64z" firstAttribute="leading" secondItem="7oK-Ex-QL8" secondAttribute="leading" constant="16" id="gKN-za-Bh9"/>
-                                                <constraint firstAttribute="trailing" secondItem="dXS-9H-ot0" secondAttribute="trailing" constant="8" id="jXa-Yi-fwp"/>
-                                                <constraint firstAttribute="bottom" secondItem="dXS-9H-ot0" secondAttribute="bottom" constant="8" id="wbz-Aq-Yn9"/>
+                                                <constraint firstAttribute="trailing" secondItem="dXS-9H-ot0" secondAttribute="trailing" constant="16" id="jXa-Yi-fwp"/>
+                                                <constraint firstAttribute="bottom" secondItem="dXS-9H-ot0" secondAttribute="bottom" constant="16" id="wbz-Aq-Yn9"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
