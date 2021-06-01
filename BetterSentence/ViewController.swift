@@ -9,18 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var sentenceLabel: UILabel!
-    @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var addSentenceButton: UIButton!
+    @IBAction func touchedAddSentenceButton(_ sender: Any) {
+        print("aaa")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        let sentence = exampleSentence.randomElement()
-        sentenceLabel.text = sentence?.sentence
-        authorLabel.text = sentence?.author
-        
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
     
