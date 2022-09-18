@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA83C89828D6DB7600E56213 /* View+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83C89728D6DB7600E56213 /* View+extension.swift */; };
 		FAB1F37D25DFFE130067CB9E /* NotoSerifCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FAB1F37925DFFCAB0067CB9E /* NotoSerifCJKkr-Medium.otf */; };
 		FAB1F38825E1498B0067CB9E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB1F38725E1498B0067CB9E /* WidgetKit.framework */; };
 		FAB1F38A25E1498B0067CB9E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB1F38925E1498B0067CB9E /* SwiftUI.framework */; };
@@ -67,6 +68,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FA83C89728D6DB7600E56213 /* View+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+extension.swift"; sourceTree = "<group>"; };
 		FAB1F37925DFFCAB0067CB9E /* NotoSerifCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifCJKkr-Medium.otf"; sourceTree = "<group>"; };
 		FAB1F38525E1498B0067CB9E /* BetterWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BetterWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB1F38725E1498B0067CB9E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -191,6 +193,7 @@
 				FAE65B662574B0A40005363D /* Info.plist */,
 				FAE65B5E2574B0A30005363D /* BetterSentence.xcdatamodeld */,
 				FAF6803A25CC3A2D000B7B2D /* Sentence.swift */,
+				FA83C89728D6DB7600E56213 /* View+extension.swift */,
 			);
 			path = BetterSentence;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 			files = (
 				FAE65B5A2574B0A30005363D /* ViewController.swift in Sources */,
 				FAE65B562574B0A30005363D /* AppDelegate.swift in Sources */,
+				FA83C89828D6DB7600E56213 /* View+extension.swift in Sources */,
 				FAB1F39325E1498D0067CB9E /* BetterWidget.intentdefinition in Sources */,
 				FAF6803B25CC3A2D000B7B2D /* Sentence.swift in Sources */,
 				FAE65B602574B0A30005363D /* BetterSentence.xcdatamodeld in Sources */,
