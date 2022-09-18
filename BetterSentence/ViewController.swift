@@ -6,13 +6,20 @@
 //
 
 import UIKit
+import Combine
 
 class ViewController: UIViewController {
+    var bag = Set<AnyCancellable>()
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var addSentenceButton: UIButton!
     @IBAction func touchedAddSentenceButton(_ sender: Any) {
-        print("aaa")
+        let vc = MakeSentenceViewController.make()
+        vc.sentence.sink { sentence in
+            print(sentence)
+        }.store(in: &bag)
+
+        present(vc, animated: true)
     }
     
     override func viewDidLoad() {
