@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		FA83C89628D47A4400E56213 /* MakeSentenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83C89528D47A4400E56213 /* MakeSentenceViewController.swift */; };
 		FA83C89828D6DB7600E56213 /* View+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83C89728D6DB7600E56213 /* View+extension.swift */; };
+		FA83C89A28D8A3B300E56213 /* SentenceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83C89928D8A3B300E56213 /* SentenceStorage.swift */; };
+		FA83C89B28D8A5FA00E56213 /* SentenceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83C89928D8A3B300E56213 /* SentenceStorage.swift */; };
 		FAB1F37D25DFFE130067CB9E /* NotoSerifCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FAB1F37925DFFCAB0067CB9E /* NotoSerifCJKkr-Medium.otf */; };
 		FAB1F38825E1498B0067CB9E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB1F38725E1498B0067CB9E /* WidgetKit.framework */; };
 		FAB1F38A25E1498B0067CB9E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB1F38925E1498B0067CB9E /* SwiftUI.framework */; };
@@ -16,7 +18,7 @@
 		FAB1F39025E1498D0067CB9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB1F38F25E1498D0067CB9E /* Assets.xcassets */; };
 		FAB1F39225E1498D0067CB9E /* BetterWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = FAB1F38E25E1498B0067CB9E /* BetterWidget.intentdefinition */; };
 		FAB1F39325E1498D0067CB9E /* BetterWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = FAB1F38E25E1498B0067CB9E /* BetterWidget.intentdefinition */; };
-		FAB1F39625E1498D0067CB9E /* BetterWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FAB1F38525E1498B0067CB9E /* BetterWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FAB1F39625E1498D0067CB9E /* BetterWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FAB1F38525E1498B0067CB9E /* BetterWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FAB1F39F25E29F900067CB9E /* Sentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF6803A25CC3A2D000B7B2D /* Sentence.swift */; };
 		FAE65B562574B0A30005363D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE65B552574B0A30005363D /* AppDelegate.swift */; };
 		FAE65B582574B0A30005363D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE65B572574B0A30005363D /* SceneDelegate.swift */; };
@@ -55,15 +57,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		FAB1F39A25E1498D0067CB9E /* Embed App Extensions */ = {
+		FAB1F39A25E1498D0067CB9E /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				FAB1F39625E1498D0067CB9E /* BetterWidgetExtension.appex in Embed App Extensions */,
+				FAB1F39625E1498D0067CB9E /* BetterWidgetExtension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -71,6 +73,7 @@
 /* Begin PBXFileReference section */
 		FA83C89528D47A4400E56213 /* MakeSentenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeSentenceViewController.swift; sourceTree = "<group>"; };
 		FA83C89728D6DB7600E56213 /* View+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+extension.swift"; sourceTree = "<group>"; };
+		FA83C89928D8A3B300E56213 /* SentenceStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceStorage.swift; sourceTree = "<group>"; };
 		FAB1F37925DFFCAB0067CB9E /* NotoSerifCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifCJKkr-Medium.otf"; sourceTree = "<group>"; };
 		FAB1F38525E1498B0067CB9E /* BetterWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BetterWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB1F38725E1498B0067CB9E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -189,6 +192,7 @@
 				FAE65B552574B0A30005363D /* AppDelegate.swift */,
 				FAE65B572574B0A30005363D /* SceneDelegate.swift */,
 				FAE65B592574B0A30005363D /* ViewController.swift */,
+				FA83C89928D8A3B300E56213 /* SentenceStorage.swift */,
 				FA83C89528D47A4400E56213 /* MakeSentenceViewController.swift */,
 				FAE65B5B2574B0A30005363D /* Main.storyboard */,
 				FAE65B612574B0A40005363D /* Assets.xcassets */,
@@ -246,7 +250,7 @@
 				FAE65B4E2574B0A30005363D /* Sources */,
 				FAE65B4F2574B0A30005363D /* Frameworks */,
 				FAE65B502574B0A30005363D /* Resources */,
-				FAB1F39A25E1498D0067CB9E /* Embed App Extensions */,
+				FAB1F39A25E1498D0067CB9E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -301,7 +305,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1220;
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					FAB1F38425E1498B0067CB9E = {
 						CreatedOnToolsVersion = 12.2;
@@ -383,6 +387,7 @@
 			files = (
 				FAB1F39225E1498D0067CB9E /* BetterWidget.intentdefinition in Sources */,
 				FAB1F39F25E29F900067CB9E /* Sentence.swift in Sources */,
+				FA83C89B28D8A5FA00E56213 /* SentenceStorage.swift in Sources */,
 				FAB1F38D25E1498B0067CB9E /* BetterWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +400,7 @@
 				FAE65B562574B0A30005363D /* AppDelegate.swift in Sources */,
 				FA83C89828D6DB7600E56213 /* View+extension.swift in Sources */,
 				FA83C89628D47A4400E56213 /* MakeSentenceViewController.swift in Sources */,
+				FA83C89A28D8A3B300E56213 /* SentenceStorage.swift in Sources */,
 				FAB1F39325E1498D0067CB9E /* BetterWidget.intentdefinition in Sources */,
 				FAF6803B25CC3A2D000B7B2D /* Sentence.swift in Sources */,
 				FAE65B602574B0A30005363D /* BetterSentence.xcdatamodeld in Sources */,

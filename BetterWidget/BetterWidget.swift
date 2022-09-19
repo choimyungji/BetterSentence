@@ -43,7 +43,9 @@ struct SimpleEntry: TimelineEntry {
 struct BetterWidgetEntryView : View {
     var entry: Provider.Entry
 
-    let sentence = exampleSentence.randomElement()
+    let sentence =
+    SentenceStorage().sentences.randomElement()
+
     var body: some View {
         Text(sentence?.sentence ?? "")
             .padding()

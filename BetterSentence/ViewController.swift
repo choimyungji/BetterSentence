@@ -9,14 +9,18 @@ import UIKit
 import Combine
 
 class ViewController: UIViewController {
-    var bag = Set<AnyCancellable>()
+    private var bag = Set<AnyCancellable>()
+    private var storage = SentenceStorage()
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var addSentenceButton: UIButton!
     @IBAction func touchedAddSentenceButton(_ sender: Any) {
         let vc = MakeSentenceViewController.make()
-        vc.sentence.sink { sentence in
-            print(sentence)
+        vc.sentence.sink { [weak self] value in
+            let sentence = Sentence(sentence: value, author: "Martin Choi", time: Date())
+            self?.storage.sentences.append(sentence)
+
+            self?.collectionView.reloadData()
         }.store(in: &bag)
 
         present(vc, animated: true)
@@ -33,14 +37,14 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        exampleSentence.count
+        storage.sentences.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CSCollectionViewCell
         
-        cell.lbl.text = exampleSentence[indexPath.row].sentence
-        cell.author.text = exampleSentence[indexPath.row].author
+        cell.lbl.text = storage.sentences[indexPath.row].sentence
+        cell.author.text = storage.sentences[indexPath.row].author
         
         return cell
     }
