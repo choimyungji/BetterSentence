@@ -74,6 +74,7 @@
 		FA83C89528D47A4400E56213 /* MakeSentenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeSentenceViewController.swift; sourceTree = "<group>"; };
 		FA83C89728D6DB7600E56213 /* View+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+extension.swift"; sourceTree = "<group>"; };
 		FA83C89928D8A3B300E56213 /* SentenceStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceStorage.swift; sourceTree = "<group>"; };
+		FA83C89C28DA08B400E56213 /* BetterSentence.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BetterSentence.entitlements; sourceTree = "<group>"; };
 		FAB1F37925DFFCAB0067CB9E /* NotoSerifCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifCJKkr-Medium.otf"; sourceTree = "<group>"; };
 		FAB1F38525E1498B0067CB9E /* BetterWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BetterWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB1F38725E1498B0067CB9E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -188,6 +189,7 @@
 		FAE65B542574B0A30005363D /* BetterSentence */ = {
 			isa = PBXGroup;
 			children = (
+				FA83C89C28DA08B400E56213 /* BetterSentence.entitlements */,
 				FAB1F37825DFFC8C0067CB9E /* Fonts */,
 				FAE65B552574B0A30005363D /* AppDelegate.swift */,
 				FAE65B572574B0A30005363D /* SceneDelegate.swift */,
@@ -477,7 +479,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.lpin.BetterSentence.BetterWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.myungji.BetterSentence.BetterWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -498,7 +500,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.lpin.BetterSentence.BetterWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.myungji.BetterSentence.BetterWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -628,6 +630,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BetterSentence/BetterSentence.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JVM82SQA75;
 				INFOPLIST_FILE = BetterSentence/Info.plist;
@@ -636,7 +639,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.lpin.BetterSentence;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.myungji.BetterSentence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -649,6 +652,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BetterSentence/BetterSentence.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JVM82SQA75;
 				INFOPLIST_FILE = BetterSentence/Info.plist;
@@ -657,7 +661,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.lpin.BetterSentence;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.myungji.BetterSentence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
