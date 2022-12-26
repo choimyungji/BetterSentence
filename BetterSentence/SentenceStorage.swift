@@ -9,6 +9,10 @@ import Foundation
 
 final class SentenceStorage {
     var sentences: [Sentence] = exampleSentence
+
+    func add(sentence: Sentence) {
+        sentences.append(sentence)
+    }
 }
 
 let exampleSentence: [Sentence] = [
