@@ -20,6 +20,7 @@
 		FAB1F39325E1498D0067CB9E /* BetterWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = FAB1F38E25E1498B0067CB9E /* BetterWidget.intentdefinition */; };
 		FAB1F39625E1498D0067CB9E /* BetterWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FAB1F38525E1498B0067CB9E /* BetterWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FAB1F39F25E29F900067CB9E /* Sentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF6803A25CC3A2D000B7B2D /* Sentence.swift */; };
+		FAC4EB682959E8C000B64339 /* SentenceStorageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC4EB672959E8C000B64339 /* SentenceStorageTest.swift */; };
 		FAE65B562574B0A30005363D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE65B552574B0A30005363D /* AppDelegate.swift */; };
 		FAE65B582574B0A30005363D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE65B572574B0A30005363D /* SceneDelegate.swift */; };
 		FAE65B5A2574B0A30005363D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE65B592574B0A30005363D /* ViewController.swift */; };
@@ -83,6 +84,7 @@
 		FAB1F38E25E1498B0067CB9E /* BetterWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = BetterWidget.intentdefinition; sourceTree = "<group>"; };
 		FAB1F38F25E1498D0067CB9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAB1F39125E1498D0067CB9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAC4EB672959E8C000B64339 /* SentenceStorageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceStorageTest.swift; sourceTree = "<group>"; };
 		FAE65B522574B0A30005363D /* BetterSentence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterSentence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE65B552574B0A30005363D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAE65B572574B0A30005363D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				FAE65B6F2574B0A50005363D /* BetterSentenceTests.swift */,
+				FAC4EB672959E8C000B64339 /* SentenceStorageTest.swift */,
 				FAE65B712574B0A50005363D /* Info.plist */,
 			);
 			path = BetterSentenceTests;
@@ -414,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC4EB682959E8C000B64339 /* SentenceStorageTest.swift in Sources */,
 				FAE65B702574B0A50005363D /* BetterSentenceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
