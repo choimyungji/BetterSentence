@@ -21,6 +21,7 @@
 		FAB1F39625E1498D0067CB9E /* BetterWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FAB1F38525E1498B0067CB9E /* BetterWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FAB1F39F25E29F900067CB9E /* Sentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF6803A25CC3A2D000B7B2D /* Sentence.swift */; };
 		FAC4EB682959E8C000B64339 /* SentenceStorageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC4EB672959E8C000B64339 /* SentenceStorageTest.swift */; };
+		FAC4EB692959EE8500B64339 /* NotoSerifCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FAB1F37925DFFCAB0067CB9E /* NotoSerifCJKkr-Medium.otf */; };
 		FAE65B562574B0A30005363D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE65B552574B0A30005363D /* AppDelegate.swift */; };
 		FAE65B582574B0A30005363D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE65B572574B0A30005363D /* SceneDelegate.swift */; };
 		FAE65B5A2574B0A30005363D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE65B592574B0A30005363D /* ViewController.swift */; };
@@ -354,6 +355,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC4EB692959EE8500B64339 /* NotoSerifCJKkr-Medium.otf in Resources */,
 				FAB1F39025E1498D0067CB9E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
