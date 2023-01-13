@@ -46,10 +46,12 @@ struct BetterWidgetEntryView : View {
     let sentence =
     SentenceStorage().sentences.randomElement()
 
+
     var body: some View {
         Text(sentence?.sentence ?? "")
+            .font(Font.custom("NotoSerifCJKkr-Medium", size: 16))
             .padding()
-            .lineSpacing(8.0)
+            .lineSpacing(6.0)
     }
 }
 
