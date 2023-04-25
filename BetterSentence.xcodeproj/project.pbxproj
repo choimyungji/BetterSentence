@@ -344,6 +344,9 @@
 				Base,
 			);
 			mainGroup = FAE65B492574B0A30005363D;
+			packageReferences = (
+				FA64EE2E298DF3E60029CD9A /* XCRemoteSwiftPackageReference "snapkit" */,
+			);
 			productRefGroup = FAE65B532574B0A30005363D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
