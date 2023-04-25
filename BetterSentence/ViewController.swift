@@ -28,9 +28,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setup()
+    }
+
+    private func setup() {
+        storage.sentencesSubject.sink { _ in
+            self.collectionView.reloadData()
+        }.store(in: &bag)
+
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-    
     }
 }
 
