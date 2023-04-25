@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -86,6 +86,7 @@
 		FAB1F38F25E1498D0067CB9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAB1F39125E1498D0067CB9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAC4EB672959E8C000B64339 /* SentenceStorageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceStorageTest.swift; sourceTree = "<group>"; };
+		FACF69FF29DB16B900412311 /* BetterWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BetterWidgetExtension.entitlements; sourceTree = "<group>"; };
 		FAE65B522574B0A30005363D /* BetterSentence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterSentence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE65B552574B0A30005363D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAE65B572574B0A30005363D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +170,7 @@
 		FAE65B492574B0A30005363D = {
 			isa = PBXGroup;
 			children = (
+				FACF69FF29DB16B900412311 /* BetterWidgetExtension.entitlements */,
 				FAE65B542574B0A30005363D /* BetterSentence */,
 				FAE65B6E2574B0A50005363D /* BetterSentenceTests */,
 				FAE65B792574B0A50005363D /* BetterSentenceUITests */,
@@ -477,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = BetterWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JVM82SQA75;
 				INFOPLIST_FILE = BetterWidget/Info.plist;
@@ -498,6 +501,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = BetterWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JVM82SQA75;
 				INFOPLIST_FILE = BetterWidget/Info.plist;
