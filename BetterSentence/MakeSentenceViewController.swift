@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 import Combine
 
 final class MakeSentenceViewController: UIViewController {
@@ -37,28 +38,73 @@ final class MakeSentenceViewController: UIViewController {
 
     override func viewDidLoad() {
         setupUI()
+        setKeyboardNotification()
+    }
+
+    private func setKeyboardNotification() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillShow),
+            name: UIResponder.keyboardWillShowNotification,
+            object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillHide),
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil)
+    }
+
+    @objc private func keyboardWillShow(_ notification: Notification) {
+        guard let userInfo = notification.userInfo,
+              let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
+            return
+        }
+
+        completeButton.snp.updateConstraints {
+            $0.bottom.equalToSuperview().offset(-keyboardFrame.height)
+        }
+    }
+
+    @objc private func keyboardWillHide() {
+        completeButton.snp.updateConstraints {
+            $0.bottom.equalToSuperview()
+        }
     }
 
     func setupUI() {
+        let safeAreaInset = UIApplication.shared.windows.first?.safeAreaInsets ?? .zero
+
         view.backgroundColor = .white
-        view.addSubviews(textView, completeButton)
+        view.addSubview(textView)
+        view.addSubview(completeButton)
 
-        NSLayoutConstraint.activate([
-            textView.topAnchor.constraint(equalTo: view.topAnchor, constant: 16),
-            textView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -16),
-            textView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            textView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+        textView.snp.makeConstraints {
+            $0.edges.equalToSuperview().inset(safeAreaInset)
+        }
 
-            completeButton.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            completeButton.heightAnchor.constraint(equalToConstant: 48 + (UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0)),
-            completeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            completeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
+        completeButton.snp.makeConstraints {
+            $0.leading.trailing.bottom.equalToSuperview()
+            $0.height.equalTo(48 + safeAreaInset.bottom)
+        }
     }
 
     @objc
     func touchedCompleteButton() {
         sentence.send(textView.text)
         dismiss(animated: true)
+    }
+}
+
+extension UIResponder {
+    private weak static var _currentFirstResponder: UIResponder? = nil
+
+    public static var current: UIResponder? {
+        UIResponder._currentFirstResponder = nil
+        UIApplication.shared.sendAction(#selector(findFirstResponder(sender:)), to: nil, from: nil, for: nil)
+        return UIResponder._currentFirstResponder
+    }
+
+    @objc internal func findFirstResponder(sender: AnyObject) {
+        UIResponder._currentFirstResponder = self
     }
 }
