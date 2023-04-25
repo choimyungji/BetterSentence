@@ -22,6 +22,7 @@ class ViewController: UIViewController {
             self?.collectionView.reloadData()
         }.store(in: &bag)
 
+        vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
     }
     
@@ -69,7 +70,20 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDelegateFlow
         let size = CGSize(width: width, height: 134)
         return size
     }
-    
+
+    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        let deleteAction = UIAction(title: "Delete", image: UIImage(systemName: "trash"), identifier: nil, attributes: .destructive) { _ in
+            let id = self.storage.sentences[indexPath.row].id
+            self.storage.deleteSentence(id: id)
+            collectionView.reloadData()
+        }
+
+        let configuration = UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { _ in
+            UIMenu(title: "", children: [deleteAction])
+        }
+
+        return configuration
+    }
 }
 
 class CSCollectionViewCell: UICollectionViewCell {
@@ -80,7 +94,6 @@ class CSCollectionViewCell: UICollectionViewCell {
         lbl.font = UIFont(name: "NotoSerifCJKkr-Medium", size: 17)
         author.font = UIFont(name: "NotoSerifCJKkr-Medium", size: 15)
         
-        print(frame)
         let line = UIView(frame: CGRect(x: frame.width * 3 / 8, y: frame.height-1, width: frame.width/4, height: 0.5))
         line.backgroundColor = .gray
         self.addSubview(line)
