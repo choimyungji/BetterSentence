@@ -10,7 +10,7 @@ import Combine
 
 class ViewController: UIViewController {
     private var bag = Set<AnyCancellable>()
-    private var storage = SentenceStorage()
+    private var storage = SentenceStorage.shared
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var addSentenceButton: UIButton!
@@ -18,8 +18,7 @@ class ViewController: UIViewController {
         let vc = MakeSentenceViewController.make()
         vc.sentence.sink { [weak self] value in
             let sentence = Sentence(sentence: value, author: "Martin Choi", time: Date())
-            self?.storage.sentences.append(sentence)
-
+            self?.storage.add(sentence: sentence)
             self?.collectionView.reloadData()
         }.store(in: &bag)
 
