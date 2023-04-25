@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		FA64EE30298DF3E60029CD9A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FA64EE2F298DF3E60029CD9A /* SnapKit */; };
+		FA69F3C729968F4400F1984F /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69F3C629968F4400F1984F /* Document.swift */; };
+		FA69F3C92998C60000F1984F /* DocumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69F3C82998C60000F1984F /* DocumentTests.swift */; };
+		FA69F3CA29991EC200F1984F /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69F3C629968F4400F1984F /* Document.swift */; };
 		FA83C89628D47A4400E56213 /* MakeSentenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83C89528D47A4400E56213 /* MakeSentenceViewController.swift */; };
 		FA83C89828D6DB7600E56213 /* View+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83C89728D6DB7600E56213 /* View+extension.swift */; };
 		FA83C89A28D8A3B300E56213 /* SentenceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83C89928D8A3B300E56213 /* SentenceStorage.swift */; };
@@ -74,6 +77,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FA69F3C629968F4400F1984F /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		FA69F3C82998C60000F1984F /* DocumentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTests.swift; sourceTree = "<group>"; };
 		FA83C89528D47A4400E56213 /* MakeSentenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeSentenceViewController.swift; sourceTree = "<group>"; };
 		FA83C89728D6DB7600E56213 /* View+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+extension.swift"; sourceTree = "<group>"; };
 		FA83C89928D8A3B300E56213 /* SentenceStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceStorage.swift; sourceTree = "<group>"; };
@@ -120,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA64EE30298DF3E60029CD9A /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +208,7 @@
 				FAE65B592574B0A30005363D /* ViewController.swift */,
 				FA83C89928D8A3B300E56213 /* SentenceStorage.swift */,
 				FA83C89528D47A4400E56213 /* MakeSentenceViewController.swift */,
+				FA69F3C629968F4400F1984F /* Document.swift */,
 				FAE65B5B2574B0A30005363D /* Main.storyboard */,
 				FAE65B612574B0A40005363D /* Assets.xcassets */,
 				FAE65B632574B0A40005363D /* LaunchScreen.storyboard */,
@@ -219,6 +226,7 @@
 				FAE65B6F2574B0A50005363D /* BetterSentenceTests.swift */,
 				FAC4EB672959E8C000B64339 /* SentenceStorageTest.swift */,
 				FAE65B712574B0A50005363D /* Info.plist */,
+				FA69F3C82998C60000F1984F /* DocumentTests.swift */,
 			);
 			path = BetterSentenceTests;
 			sourceTree = "<group>";
@@ -405,6 +413,7 @@
 				FAB1F39F25E29F900067CB9E /* Sentence.swift in Sources */,
 				FA83C89B28D8A5FA00E56213 /* SentenceStorage.swift in Sources */,
 				FAB1F38D25E1498B0067CB9E /* BetterWidget.swift in Sources */,
+				FA69F3CA29991EC200F1984F /* Document.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +425,7 @@
 				FAE65B562574B0A30005363D /* AppDelegate.swift in Sources */,
 				FA83C89828D6DB7600E56213 /* View+extension.swift in Sources */,
 				FA83C89628D47A4400E56213 /* MakeSentenceViewController.swift in Sources */,
+				FA69F3C729968F4400F1984F /* Document.swift in Sources */,
 				FA83C89A28D8A3B300E56213 /* SentenceStorage.swift in Sources */,
 				FAB1F39325E1498D0067CB9E /* BetterWidget.intentdefinition in Sources */,
 				FAF6803B25CC3A2D000B7B2D /* Sentence.swift in Sources */,
@@ -429,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC4EB682959E8C000B64339 /* SentenceStorageTest.swift in Sources */,
+				FA69F3C92998C60000F1984F /* DocumentTests.swift in Sources */,
 				FAE65B702574B0A50005363D /* BetterSentenceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
