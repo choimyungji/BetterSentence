@@ -13,7 +13,7 @@ final class SentenceStorageTest: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        sut = SentenceStorage()
+        sut = SentenceStorage.shared
     }
 
     override func tearDown() {
@@ -25,10 +25,30 @@ final class SentenceStorageTest: XCTestCase {
     func test_addSentence() {
         let count = sut.sentences.count
 
-        let sentence = Sentence(sentence: "안녕하세요", author: "Martin", time: Date())
+        let sentence = Sentence(id: UUID().uuidString, sentence: "안녕하세요", author: "Martin", time: Date())
         sut.add(sentence: sentence)
 
         XCTAssertEqual(sut.sentences.count, count+1)
+    }
+
+    func test_deleteSentence() {
+
+        let sentence1 = Sentence(id: UUID().uuidString, sentence: "안녕하세요", author: "Martin", time: Date())
+        sut.add(sentence: sentence1)
+
+        let sentence2 = Sentence(id: UUID().uuidString, sentence: "안녕하세요", author: "Martin", time: Date())
+        sut.add(sentence: sentence2)
+
+        let sentence3 = Sentence(id: UUID().uuidString, sentence: "안녕하세요", author: "Martin", time: Date())
+        sut.add(sentence: sentence3)
+
+        let count = sut.sentences.count
+        
+        if let sentenceId = sut.sentences.first?.id {
+            sut.deleteSentence(id: sentenceId)
+        }
+
+        XCTAssertEqual(sut.sentences.count, count-1)
     }
 
 }
