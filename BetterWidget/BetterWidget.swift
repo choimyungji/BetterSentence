@@ -9,24 +9,24 @@ import WidgetKit
 import SwiftUI
 import Intents
 
-struct Provider: IntentTimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationIntent())
+struct SimpleQuoteWidgetProvider: TimelineProvider {
+    typealias Entry = SimpleQuoteWidgetEntry
+
+    func placeholder(in context: Context) -> SimpleQuoteWidgetEntry {
+        SimpleQuoteWidgetEntry(date: Date(), quote: Sentence(sentence: "Hello, World!", author: "Anonymous"))
     }
 
-    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), configuration: configuration)
+    func getSnapshot(in context: Context, completion: @escaping (SimpleQuoteWidgetEntry) -> ()) {
+        let entry = SimpleQuoteWidgetEntry(date: Date(), quote: Sentence(sentence: "Hello, World!", author: "Anonymous"))
         completion(entry)
     }
 
-    func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
+    func getTimeline(in context: Context, completion: @escaping (Timeline<SimpleQuoteWidgetEntry>) -> ()) {
+        var entries: [SimpleQuoteWidgetEntry] = []
 
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
+        // Get a random quote from the store
+        if let quote = SentenceStorage.shared.sentences.randomElement() {
+            let entry = SimpleQuoteWidgetEntry(date: Date(), quote: quote)
             entries.append(entry)
         }
 
@@ -35,20 +35,20 @@ struct Provider: IntentTimelineProvider {
     }
 }
 
+struct SimpleQuoteWidgetEntry: TimelineEntry {
+    let date: Date
+    let quote: Sentence
+}
+
 struct SimpleEntry: TimelineEntry {
     let date: Date
     let configuration: ConfigurationIntent
 }
 
 struct BetterWidgetEntryView : View {
-    var entry: Provider.Entry
-
-    let sentence =
-    SentenceStorage().sentences.randomElement()
-
-
+    let sentence: Sentence
     var body: some View {
-        Text(sentence?.sentence ?? "")
+        Text(sentence.sentence)
             .font(Font.custom("NotoSerifCJKkr-Medium", size: 16))
             .padding()
             .lineSpacing(6.0)
@@ -60,17 +60,18 @@ struct BetterWidget: Widget {
     let kind: String = "BetterWidget"
 
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
-            BetterWidgetEntryView(entry: entry)
+        StaticConfiguration(kind: kind, provider: SimpleQuoteWidgetProvider()) { entry in
+            BetterWidgetEntryView(sentence: entry.quote)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Simple Quote")
+        .description("Display a random quote from your app.")
+        .supportedFamilies([.systemSmall])
     }
 }
 
 struct BetterWidget_Previews: PreviewProvider {
     static var previews: some View {
-        BetterWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        BetterWidgetEntryView(sentence: Sentence(sentence: "Hello, World", author: "Maengji"))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
