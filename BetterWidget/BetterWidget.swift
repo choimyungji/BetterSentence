@@ -65,7 +65,7 @@ struct BetterWidget: Widget {
         }
         .configurationDisplayName("Simple Quote")
         .description("Display a random quote from your app.")
-        .supportedFamilies([.systemSmall])
+        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
     }
 }
 
